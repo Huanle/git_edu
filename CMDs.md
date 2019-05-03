@@ -83,7 +83,24 @@ git init # initialzing a repository from the current existing directory; Alterna
 	without any arguments, git diff shows you the differences between the files in your working directory and what has been staged.
 	$git diff
 	[nothing]
+	echo 'project started 2019-05-03' > CMD.md 
 	
+	
+	$ git diff
+	diff --git a/CMDs.md b/CMDs.md
+	index cdf9987..8620ac8 100644
+	--- a/CMDs.md
+	+++ b/CMDs.md
+	@@ -83,6 +83,9 @@ git init # initialzing a repository from the current existing directory; Alterna
+			without any arguments, git diff shows you the differences between the files in your working directory and what has been staged.
+			$git diff
+			[nothing]
+	+       echo 'project started 2019-05-03' > CMD.md
+	+
+	+       
+
+
+
 	
 	
 
