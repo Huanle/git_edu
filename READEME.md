@@ -79,7 +79,7 @@ git init # initialzing a repository from the current existing directory; Alterna
 	# On branch master
 	nothing to commit, working directory clean
 	
-## Seeing file differences: git differences
+## Seeing file differences: git diff
 	without any arguments, git diff shows you the differences between the files in your working directory and what has been staged.
 	$git diff
 	[nothing]
@@ -98,6 +98,68 @@ git init # initialzing a repository from the current existing directory; Alterna
 	+       echo 'project started 2019-05-03' > CMD.md
 	+
 	+       
+
+	$ git add
+	$ git diff --staged  #  
+	
+	diff --git a/CMDs.md b/CMDs.md
+	index cdf9987..6600e4e 100644
+	--- a/CMDs.md
+	+++ b/CMDs.md
+	@@ -83,8 +83,25 @@ git init # initialzing a repository from the current existing directory; Alterna
+			without any arguments, git diff shows you the differences between the files in your working directory and what has been staged.
+			$git diff
+			[nothing]
+	+       echo 'project started 2019-05-03' > CMD.md
+	
+	
+	+       $ git diff
+	+       diff --git a/CMDs.md b/CMDs.md
+	+       index cdf9987..8620ac8 100644
+	+       --- a/CMDs.md
+	+       +++ b/CMDs.md
+	+       @@ -83,6 +83,9 @@ git init # initialzing a repository from the current existing directory; Alterna
+	+                       without any arguments, git diff shows you the differences between the files in your working directory and what has been staged.
+	+                       $git diff
+	+                       [nothing]
+	+       +       echo 'project started 2019-05-03' > CMD.md
+	+       +
+	+       +
+	+
+	+
+	+
+	+
+	
+	$ git commit -m 'test git diff'
+	[master 30af4c6] test git diff
+	$ git diff # nothing
+	$ git diff --staged # nothing
+	
+### Seeing your commit history: git log
+	Commits in git are like chains(directed acyclic graphs), with each commit pointing to its parent
+	
+	$ git log
+	commit 30af4c65b1faaac4dc17ceb7111366edf0c33f56
+	Author: Huanle <elzedliu@gmail.com>
+	Date:   Fri May 3 14:27:22 2019 +0200
+
+		test git diff
+
+	commit bdd7ce025aa018d1d9993275b12b66898909e6d8
+	Author: Huanle <elzedliu@gmail.com>
+	Date:   Fri May 3 14:22:46 2019 +0200
+
+		initial import
+
+	commit 025a0f21a64a2c6b59ff0bdcef708a873434dd20
+	Author: Huanle <elzedliu@gmail.com>
+	Date:   Fri May 3 14:13:15 2019 +0200
+
+			initial import
+	
+
+### Moving and removing files: git mv and git rm
+	
 
 
 
