@@ -159,14 +159,44 @@ git init # initialzing a repository from the current existing directory; Alterna
 	
 
 ### Moving and removing files: git mv and git rm
+	$ git mv CMDs.md READEME.md
+	$ git status
+	# On branch master
+	# Changes to be committed:
+	#   (use "git reset HEAD <file>..." to unstage)
+	#
+	#       renamed:    CMDs.md -> READEME.md
+	#
+	# Changes not staged for commit:
+	#   (use "git add <file>..." to update what will be committed)
+	#   (use "git checkout -- <file>..." to discard changes in working directory)
+	#
+	#       modified:   READEME.md
+	#
 	
 
-
-
+### undoing a stage: git reset 
+### this line is to test git reset
+	$ git add READEME.md
+	$ git status
+	# On branch master
+	# Changes to be committed:
+	#   (use "git reset HEAD <file>..." to unstage)
+	#
+	#       modified:   READEME.md
+	#
 	
-	
+	$ git reset HEAD READEME.md
+		.....
+	$ git status
+	# On branch master
+	# Changes not staged for commit:
+	#   (use "git add <file>..." to update what will be committed)
+	#   (use "git checkout -- <file>..." to discard changes in working directory)
+	#
+	#       modified:   READEME.md
+	#
+	no changes added to commit (use "git add" and/or "git commit -a")
 
-
-
-
+### Collaborating with Git: Git remotes, git push, 
 
